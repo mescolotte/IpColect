@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="e1">
+
+    </div>
+
+    <script>
+
+        var algo = document.getElementById("e1")
+
+        const url = 'https://api.ipify.org?format=textp&callback'
+        const options = {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/text'
+            }
+        }
+        var ip
+        fetch(url, options)
+            .then((response)=>response.text())
+            .then((response)=>{algo.innerText= response})
+    </script>
+  </body>
+</html>
